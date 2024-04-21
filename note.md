@@ -1,0 +1,1 @@
+gradle.properties放着配置信息
