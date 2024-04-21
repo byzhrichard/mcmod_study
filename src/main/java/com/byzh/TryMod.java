@@ -1,5 +1,6 @@
 package com.byzh;
 
+import com.byzh.item.ModItemGroup;
 import com.byzh.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -14,5 +15,6 @@ public class TryMod implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
 		ModItems.registerModItems();
+		ModItemGroup.registerModItemGroup();
 	}
 }
