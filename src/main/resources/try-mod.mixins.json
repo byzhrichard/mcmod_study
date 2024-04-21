@@ -3,7 +3,7 @@
 	"package": "com.byzh.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ExampleMixin"
+      "TryModMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

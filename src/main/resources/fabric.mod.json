@@ -5,18 +5,21 @@
 	"name": "try Mod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
-		"Me!"
+		"byzh"
 	],
 	"contact": {
 		"homepage": "https://fabricmc.net/",
 		"sources": "https://github.com/FabricMC/fabric-example-mod"
 	},
-	"license": "CC0-1.0",
+	"license": "MIT",
 	"icon": "assets/try-mod/icon.png",
 	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"com.byzh.TryMod"
+		],
+		"client": [
+			"com.byzh.TryModClient"
 		],
 		"fabric-datagen": [
 			"com.byzh.TryModDataGenerator"
