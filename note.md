@@ -37,3 +37,8 @@ public class ModItems {
 2. 语言文件
 src/main/resources/assets/try-mod/lang/en_us.json
 src/main/resources/assets/try-mod/lang/zh_cn.json
+3. 模型 
+用Minecraft原版物品的渲染方法
+src/main/resources/assets/try-mod/models/item/ice_ether.json
+4. 材质文件
+src/main/resources/assets/try-mod/textures/item/ice_ether.png
