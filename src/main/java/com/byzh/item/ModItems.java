@@ -22,11 +22,11 @@ public class ModItems {
                 item);
     }
     //添加到fabric的物品group中
-    private static void addItemsToItemGroup(FabricItemGroupEntries fabricItemGroupEntries){
+    private static void addItemsToItemGroup1(FabricItemGroupEntries fabricItemGroupEntries){
         fabricItemGroupEntries.add(ICE_ETHER);
     }
-    //将 fabric物品栏 注册到 Minecraft物品栏
+    //将 fabric物品栏 注册到 Minecraft物品栏（原材料）
     public static void registerModItems(){
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToItemGroup);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToItemGroup1);
     }
 }
