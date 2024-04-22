@@ -24,14 +24,6 @@ public class ModItems {
                 new Identifier(TryMod.MOD_ID, name),
                 item);
     }
-    //添加到fabric的物品group中
-    private static void addItemsToItemGroup(FabricItemGroupEntries fabricItemGroupEntries){
-        fabricItemGroupEntries.add(ICE_ETHER);
-    }
-    //将 fabric物品栏 注册到 Minecraft物品栏
-    public static void registerModItems(){
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToItemGroup);
-    }
 }
 ```
 2. 语言文件
