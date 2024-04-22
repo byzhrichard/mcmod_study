@@ -14,7 +14,9 @@ public class TryMod implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
+		//物品注册
 		ModItems.registerModItems();
+		//物品栏注册
 		ModItemGroup.registerModItemGroup();
 	}
 }
