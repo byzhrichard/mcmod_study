@@ -1,5 +1,6 @@
 package com.byzh;
 
+import com.byzh.block.ModBlocks;
 import com.byzh.item.ModItemGroup;
 import com.byzh.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -18,5 +19,7 @@ public class TryMod implements ModInitializer {
 		ModItems.registerModItems();
 		//物品栏注册
 		ModItemGroup.registerModItemGroup();
+		//方块注册
+		ModBlocks.registerModBlocks();
 	}
 }

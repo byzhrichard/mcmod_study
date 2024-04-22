@@ -21,7 +21,7 @@ public class ModItems {
                 new Identifier(TryMod.MOD_ID, name),
                 item);
     }
-
+    //============================================================================
     //添加到 fabric物品栏 中
     private static void addItemsToItemGroup1(FabricItemGroupEntries fabricItemGroupEntries){
         fabricItemGroupEntries.add(ICE_ETHER);
