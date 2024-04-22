@@ -25,7 +25,7 @@ public class ModBlocks {
     }
     //方块
     public static Block registerBlocks(String name,Block block){
-        registerBlockItems(name, block);
+        registerBlockItems(name, block);//注册 方块 的时候也注册 方块物品
         return Registry.register(
                 Registries.BLOCK,
                 new Identifier(TryMod.MOD_ID, name),
