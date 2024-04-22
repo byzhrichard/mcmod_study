@@ -29,7 +29,7 @@ public class ModItems {
 2. 语言文件
 src/main/resources/assets/try-mod/lang/en_us.json
 src/main/resources/assets/try-mod/lang/zh_cn.json
-3. 模型 
+3. 模型|物品状态文件
 用Minecraft原版物品的渲染方法
 src/main/resources/assets/try-mod/models/item/ice_ether.json
 4. 材质文件
@@ -37,6 +37,10 @@ src/main/resources/assets/try-mod/textures/item/ice_ether.png
 
 # Block
 Block注册分为 方块(Block) and 方块物品(BlockItem)
-
+方块状态文件：
+src/main/resources/assets/try-mod/blockstates/ice_ether_block.json
+方块模型文件：
+src/main/resources/assets/try-mod/models/block/ice_ether_block.json
+方块材质文件:
 > 对copyOf中的Blocks.STONE的STONE进行ctrl+b
 > ![img.png](pic/img.png)

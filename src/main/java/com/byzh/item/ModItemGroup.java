@@ -1,6 +1,7 @@
 package com.byzh.item;
 
 import com.byzh.TryMod;
+import com.byzh.block.ModBlocks;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.ItemGroup;
@@ -24,6 +25,7 @@ public class ModItemGroup {
                     .icon(()->new ItemStack(ModItems.ICE_ETHER))
                     .entries( (displayContext, entries) -> {
                         entries.add(ModItems.ICE_ETHER);
+                        entries.add(ModBlocks.ICE_ETHER_BLOCK);
                         entries.add(Items.BOOK);
                         entries.add(Blocks.GRASS_BLOCK);
                     })
