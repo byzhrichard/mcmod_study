@@ -37,10 +37,26 @@ src/main/resources/assets/try-mod/textures/item/ice_ether.png
 
 # Block
 Block注册分为 方块(Block) and 方块物品(BlockItem)
+
 方块状态文件：
 src/main/resources/assets/try-mod/blockstates/ice_ether_block.json
+告诉mc当渲染名为ice_ether_block的方块时，应该使用哪个模型文件 
+
 方块模型文件：
 src/main/resources/assets/try-mod/models/block/ice_ether_block.json
+"all": 6个面都是
+"cube_all": 内置的模型，一个简单的立方体
+
 方块材质文件:
+src/main/resources/assets/try-mod/textures/block/ice_ether_block.png
+> 如果没有，就会变成
+> ![img.png](pic/123123123.png)
+
+方块手持文件:
+src/main/resources/assets/try-mod/models/item/ice_ether_block.json
+> 继承自方块材质文件
+> 如果没有，就会变成
+> ![img.png](pic/img2.png)
+
 > 对copyOf中的Blocks.STONE的STONE进行ctrl+b
 > ![img.png](pic/img.png)
