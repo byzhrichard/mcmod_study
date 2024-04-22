@@ -34,7 +34,43 @@ src/main/resources/assets/try-mod/lang/zh_cn.json
 src/main/resources/assets/try-mod/models/item/ice_ether.json
 4. 材质文件
 src/main/resources/assets/try-mod/textures/item/ice_ether.png
-
+# ItemGroup
+写在一行
+```java
+public static final ItemGroup Try_Group = Registry.register(
+            Registries.ITEM_GROUP,
+            new Identifier(TryMod.MOD_ID, "try_group"),
+            FabricItemGroup.builder()
+                    .displayName(Text.translatable("itemGroup.try_group"))
+                    .icon(()->new ItemStack(ModItems.ICE_ETHER))
+                    .entries( (displayContext, entries) -> {
+                        entries.add(ModItems.ICE_ETHER);
+                        entries.add(ModBlocks.ICE_ETHER_BLOCK);
+                        entries.add(Items.BOOK);
+                        entries.add(Blocks.GRASS_BLOCK);
+                    }).build()
+    );
+```
+分多行写
+```java
+public static final ItemGroup TRY_GROUP_Bulider = FabricItemGroup.builder()
+            .displayName(Text.translatable("itemGroup.try_group"))
+            .icon(()->new ItemStack(ModItems.ICE_ETHER))
+            .entries( (displayContext, entries) -> {
+                entries.add(ModItems.ICE_ETHER);
+                entries.add(ModBlocks.ICE_ETHER_BLOCK);
+                entries.add(Items.BOOK);
+                entries.add(Blocks.GRASS_BLOCK);
+            }).build();
+public static final ItemGroup TRY_GROUP = registerItemGroups("try_group", TRY_GROUP_Bulider);
+//物品栏注册的方法
+private static ItemGroup registerItemGroups(String name, ItemGroup itemGroup){
+        return Registry.register(
+                Registries.ITEM_GROUP,
+                new Identifier(TryMod.MOD_ID, name),
+                itemGroup);
+    }
+```
 # Block
 Block注册分为 方块(Block) and 方块物品(BlockItem)
 
