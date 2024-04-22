@@ -96,3 +96,8 @@ src/main/resources/assets/try-mod/models/item/ice_ether_block.json
 
 > 对copyOf中的Blocks.STONE的STONE进行ctrl+b
 > ![img.png](pic/img.png)
+# 配方
+src/main/resources/data/try-mod/recipes/ice_ether_to_block.json
+如果要复写原版物品的配方，则加上 "replace": true,
+> 外部库可以找到mc原版物品的json写法
+> ![img.png](pic/9289924.png)
