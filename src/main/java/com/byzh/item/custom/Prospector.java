@@ -48,7 +48,7 @@ public class Prospector extends Item {
     }
 
     private boolean isRightBlock(BlockState state){
-        return state.isOf(Blocks.IRON_ORE);
+        return state.isOf(Blocks.IRON_ORE) || state.isOf(Blocks.DIAMOND_ORE);
 
     }
 }

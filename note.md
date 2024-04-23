@@ -127,3 +127,5 @@ bonus_rolls：配合幸运值属性增加战利品投掷的次数，值可为浮
 
 # 拓展：探矿器
 src/main/java/com/byzh/item/custom/Prospector.java
+因为Prospector已经继承了Item
+所以注册物品的时候new的是Prospector而不是Item
