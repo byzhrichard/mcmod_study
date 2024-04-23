@@ -101,3 +101,10 @@ src/main/resources/data/try-mod/recipes/ice_ether_to_block.json
 如果要复写原版物品的配方，则加上 "replace": true,
 > 外部库可以找到mc原版物品的json写法
 > ![img.png](pic/9289924.png)
+
+# loot_tables
+src/main/resources/data/try-mod/loot_tables/blocks/ice_ether_block.json
+rolls: 指定在抽奖池中抽奖的基础次数
+bonus_rolls：配合幸运值属性增加战利品投掷的次数，值可为浮点数，可以为负数，等同于在rolls的次数基础上增加额外的抽取次数。
+计算公式如下：
+最终投掷次数 = rolls + luck * bonus_rolls（结果向下取整，若最终投掷次数≤0则不掉落）
