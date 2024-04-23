@@ -13,11 +13,13 @@ import net.minecraft.world.BlockStateRaycastContext;
 import net.minecraft.world.World;
 
 public class Prospector extends Item {
+    //构造函数
     public Prospector(Settings settings) {
         super(settings);
     }
 
-    @Override
+
+    @Override //右键方块的时候
     public ActionResult useOnBlock(ItemUsageContext context) {
         World world = context.getWorld();
         if (!world.isClient()){ //客户端与服务端的判断
