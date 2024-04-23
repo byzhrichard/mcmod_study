@@ -21,6 +21,7 @@ public class ModItemGroup {
             .icon(()->new ItemStack(ModItems.ICE_ETHER))
             .entries( (displayContext, entries) -> {
                 entries.add(ModItems.ICE_ETHER);
+                entries.add(ModItems.BYZH_STAR);
                 entries.add(ModBlocks.ICE_ETHER_BLOCK);
                 entries.add(Items.BOOK);
                 entries.add(Blocks.GRASS_BLOCK);

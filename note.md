@@ -10,6 +10,16 @@ icon模组图片
 # 启动
 gradle-Tasks-fabric-runClient
 
+# lang
+> 若不写lang，大致以“类型.模组ID.物品名字”显示
+> 类型由mc内部决定
+> 模组ID由模组ID决定
+> 物品名字由new Identifier内的name决定
+
+src/main/resources/assets/try-mod/lang/en_us.json
+src/main/resources/assets/try-mod/lang/zh_cn.json
+![img.png](pic/5325324.png)
+
 # Item
 1. 代码
 ```java
@@ -31,6 +41,8 @@ src/main/resources/assets/try-mod/lang/en_us.json
 src/main/resources/assets/try-mod/lang/zh_cn.json
 3. 模型|物品状态文件
 用Minecraft原版物品的渲染方法
+MC会**自动**根据物品注册时new Identifier内的name来找models下对应的xxx.json
+会根据ice_ether.json来定位材质文件所在位置
 src/main/resources/assets/try-mod/models/item/ice_ether.json
 4. 材质文件
 src/main/resources/assets/try-mod/textures/item/ice_ether.png
@@ -112,3 +124,6 @@ bonus_rolls：配合幸运值属性增加战利品投掷的次数，值可为浮
 还需要注册到 挖掘等级 中:
 注意，必须需要写"replace": false
 ![img.png](pic/21312312.png)
+
+# 拓展：探矿器
+src/main/java/com/byzh/item/custom/Prospector.java
