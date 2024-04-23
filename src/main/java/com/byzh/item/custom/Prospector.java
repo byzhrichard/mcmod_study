@@ -26,7 +26,7 @@ public class Prospector extends Item {
             BlockPos blockPos = context.getBlockPos();
             PlayerEntity player = context.getPlayer();
             boolean foundBlock = false;
-            for (int i = -64; i <= blockPos.getY()+64; i++) {
+            for (int i = -64; i <= blockPos.getY() + 64; i++) {
                 BlockState state = context.getWorld().getBlockState(blockPos.down(i));
                 if (isRightBlock(state)){
                     outputMessage(blockPos.down(i), player, state.getBlock());
@@ -39,7 +39,7 @@ public class Prospector extends Item {
             }
         }
         //减去耐久值
-        context.getStack().damage(1,context.getPlayer(),
+        context.getStack().damage(1, context.getPlayer(),
                 playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
         return ActionResult.SUCCESS;
     }
@@ -51,6 +51,5 @@ public class Prospector extends Item {
 
     private boolean isRightBlock(BlockState state){
         return state.isOf(Blocks.IRON_ORE) || state.isOf(Blocks.DIAMOND_ORE);
-
     }
 }

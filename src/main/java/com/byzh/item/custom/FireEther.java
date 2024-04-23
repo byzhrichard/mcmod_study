@@ -25,13 +25,13 @@ public class FireEther extends Item {
         super(settings);
     }
 
-    @Override
-    public ActionResult useOnBlock(ItemUsageContext context) {
+    @Override //右键方块的时候
+    public ActionResult useOnBlock(ItemUsageContext context) { //context携带了该操作的信息
         World world = context.getWorld();
         if (!world.isClient){
-            PlayerEntity player = context.getPlayer();
-            ItemStack stack = context.getStack();
-            BlockState blockState = world.getBlockState(context.getBlockPos());
+            PlayerEntity player = context.getPlayer();  //获取玩家对象
+            ItemStack stack = context.getStack();   //获取物品对象
+            BlockState blockState = world.getBlockState(context.getBlockPos()); //获取方块状态对象
 
             lightFire(blockState, context, player);
             stack.damage(1, player, playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()));
