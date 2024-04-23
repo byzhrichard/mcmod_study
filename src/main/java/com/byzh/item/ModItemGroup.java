@@ -22,6 +22,7 @@ public class ModItemGroup {
             .entries( (displayContext, entries) -> {
                 entries.add(ModItems.ICE_ETHER);
                 entries.add(ModItems.BYZH_STAR);
+                entries.add(ModItems.BYZH_FIRE);
                 entries.add(ModBlocks.ICE_ETHER_BLOCK);
                 entries.add(Items.BOOK);
                 entries.add(Blocks.GRASS_BLOCK);

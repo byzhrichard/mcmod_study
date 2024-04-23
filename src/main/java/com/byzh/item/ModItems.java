@@ -15,6 +15,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     //注册物品
     public static final Item ICE_ETHER = registerItems("ice_ether",new Item(new FabricItemSettings()));
+    public static final Item BYZH_FIRE = registerItems("byzh_fire",new Item(new FabricItemSettings()));
     public static final Item BYZH_STAR = registerItems("byzh_star",new Prospector(new FabricItemSettings().maxDamage(64)));
 
     //物品注册的方法
