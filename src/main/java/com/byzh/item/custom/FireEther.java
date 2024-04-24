@@ -42,15 +42,15 @@ public class FireEther extends Item {
     private void lightFire(BlockState blockState, ItemUsageContext context, PlayerEntity player) {
         boolean playerNotOnFire = !player.isOnFire();
         if (context.getWorld().getRandom().nextFloat() > 0.5f){
-            lightEntityOnFire(player, 200);
+            lightEntityOnFire(player, 200);//实体着火
         } else if (playerNotOnFire && blockIsRight(blockState)){
-            gainFAandDB(player, context.getWorld(), context.getBlockPos());
+            gainFAandDB(player, context.getWorld(), context.getBlockPos());//抗火保护
         } else {
-            lightGround(context);
+            lightGround(context);//点燃地面
         }
     }
 
-    private void lightGround(ItemUsageContext context) {
+    private void lightGround(ItemUsageContext context) {//来自打火石
         PlayerEntity player = context.getPlayer();
         World world = context.getWorld();
         BlockPos blockPos = context.getBlockPos();

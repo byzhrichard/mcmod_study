@@ -1,6 +1,7 @@
 package com.byzh.item;
 
 import com.byzh.TryMod;
+import com.byzh.item.custom.FireEther;
 import com.byzh.item.custom.Prospector;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
@@ -15,7 +16,7 @@ import net.minecraft.util.Identifier;
 public class ModItems {
     //注册物品
     public static final Item ICE_ETHER = registerItems("ice_ether",new Item(new FabricItemSettings()));
-    public static final Item BYZH_FIRE = registerItems("byzh_fire",new Item(new FabricItemSettings()));
+    public static final Item BYZH_FIRE = registerItems("byzh_fire",new FireEther(new FabricItemSettings().maxDamage(64)));
     public static final Item BYZH_STAR = registerItems("byzh_star",new Prospector(new FabricItemSettings().maxDamage(64)));
 
     //物品注册的方法

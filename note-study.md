@@ -18,6 +18,7 @@ public ActionResult useOnBlock(ItemUsageContext context) {
 
 2. World 世界
 - getBlockState(BlockPos对象)
+- breakBlock(BlockPos对象,drop: false)
 
 3. ItemStack
 - damage(扣除的耐久值, PlayerEntity对象, playerEntity -> playerEntity.sendToolBreakStatus(playerEntity.getActiveHand()))
@@ -30,6 +31,9 @@ public ActionResult useOnBlock(ItemUsageContext context) {
 
 6. PlayerEntity 玩家实体
 - sendMessage(Text.literal("文本信息"))
+- isOnFire()
+- addStatusEffect(StatusEffectInstance对象)
+- setFireTicks(整数)
 
 ### 获取原版对象
 Blocks.IRON_ORE
