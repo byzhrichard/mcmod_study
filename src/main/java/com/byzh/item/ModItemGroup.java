@@ -23,6 +23,7 @@ public class ModItemGroup {
                 entries.add(ModItems.ICE_ETHER);
                 entries.add(ModItems.BYZH_STAR);
                 entries.add(ModItems.BYZH_FIRE);
+                entries.add(ModItems.BYZH_FOOD);
                 entries.add(ModBlocks.ICE_ETHER_BLOCK);
                 entries.add(ModBlocks.FIRE_BLOCK);
                 entries.add(Items.BOOK);
