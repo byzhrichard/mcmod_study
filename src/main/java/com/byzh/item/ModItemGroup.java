@@ -24,6 +24,7 @@ public class ModItemGroup {
                 entries.add(ModItems.BYZH_STAR);
                 entries.add(ModItems.BYZH_FIRE);
                 entries.add(ModBlocks.ICE_ETHER_BLOCK);
+                entries.add(ModBlocks.FIRE_BLOCK);
                 entries.add(Items.BOOK);
                 entries.add(Blocks.GRASS_BLOCK);
             }).build();

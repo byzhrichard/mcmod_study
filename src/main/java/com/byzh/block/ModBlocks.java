@@ -1,6 +1,7 @@
 package com.byzh.block;
 
 import com.byzh.TryMod;
+import com.byzh.block.custom.FireBlock;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.minecraft.block.Block;
@@ -20,6 +21,9 @@ public class ModBlocks {
     public static final Block ICE_ETHER_BLOCK = registerBlocks(
             "ice_ether_block",
             new Block(FabricBlockSettings.copyOf(Blocks.STONE)));
+    public static final Block FIRE_BLOCK = registerBlocks(
+            "fire_block",
+            new FireBlock(FabricBlockSettings.copyOf(Blocks.STONE)));
     //==注册方法=====================================================================
     //方块物品(就不用跑到ModItems去注册了)
     private static Item registerBlockItems(String name, Block block){
