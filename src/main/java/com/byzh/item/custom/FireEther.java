@@ -53,18 +53,27 @@ public class FireEther extends Item {
     private void lightGround(ItemUsageContext context) {//来自打火石
         PlayerEntity player = context.getPlayer();
         World world = context.getWorld();
-        BlockPos blockPos = context.getBlockPos();
-        BlockPos blockPos1 = blockPos.offset(context.getSide());
+        BlockPos blockPos = context.getBlockPos();//点击方块的位置
+        BlockPos blockPos1 = blockPos.offset(context.getSide());//向点击的面的方向向量偏移一格的方块的位置
         if (AbstractFireBlock.canPlaceAt(world, blockPos1, context.getHorizontalPlayerFacing())){
             world.playSound(player,
                     blockPos1,
-                    SoundEvents.ITEM_FLINTANDSTEEL_USE,
-                    SoundCategory.BLOCKS,
+                    SoundEvents.ITEM_FLINTANDSTEEL_USE,//打火石音效
+                    SoundCategory.BLOCKS,//声音类别
                     1.0f,
                     world.getRandom().nextFloat() * 0.4f + 0.8f);
             BlockState blockState2 = AbstractFireBlock.getState(world, blockPos1);
-            world.setBlockState(blockPos1, blockState2, Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
-            world.emitGameEvent((Entity)player, GameEvent.BLOCK_PLACE, blockPos);
+            world.setBlockState(blockPos1, blockState2, Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);//
+            world.emitGameEvent((Entity)player, GameEvent.BLOCK_PLACE, blockPos);//
+            /*
+            * Block.NOTIFY_ALL：这是一个常量标志，表示在更改方块状态后，应通知所有对此事件感兴趣的监听器。这包括但不限于：
+            * 更新附近方块的碰撞箱、渲染数据等。触发与方块变化相关的游戏逻辑，如红石电路更新、生物行为调整、玩家成就解锁等。
+            * 向客户端同步此变化，确保多人游戏中的其他玩家能看到相同的场景。*/
+            /*
+            * Block.REDRAW_ON_MAIN_THREAD：这是一个常量标志，指示在主线程上重新绘制（或更新渲染）与此次方块状态变化相关的区块（chunk）。
+            * 在多线程环境中，通常游戏世界的物理模拟、逻辑处理等在工作线程中进行，而图形渲染在主线程进行。使用此标志确保：
+            * 重绘操作与用户交互、界面更新等其他主线程任务同步执行，避免画面撕裂、延迟等问题。
+            * 保证在主线程上按照正确的顺序更新相关方块及周围环境的视觉表现，如光照计算、流体流动动画等。*/
         }
     }
 
