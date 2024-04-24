@@ -1,3 +1,6 @@
+# 操作
+在终端输入./gradlew genSources会获取mc反编译的文件，由此可以看到源码
+
 # gradle.properties放着配置信息
 mod_version=1.0.0
 maven_group=com.byzh
@@ -129,6 +132,10 @@ bonus_rolls：配合幸运值属性增加战利品投掷的次数，值可为浮
 src/main/java/com/byzh/item/ModFoodComponents.java
 > 同时在Item注册时加上链式编程:
 > public static final Item BYZH_FOOD = registerItems("byzh_food",new Item(new FabricItemSettings().food(ModFoodComponents.CORN)));
+
+# Fuel
+
+
 
 # 拓展：探矿器
 src/main/java/com/byzh/item/custom/Prospector.java

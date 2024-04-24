@@ -5,6 +5,7 @@ import com.byzh.item.ModItemGroup;
 import com.byzh.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.registry.FuelRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -21,5 +22,7 @@ public class TryMod implements ModInitializer {
 		ModItemGroup.registerModItemGroup();
 		//方块注册
 		ModBlocks.registerModBlocks();
+		//燃料注册
+		FuelRegistry.INSTANCE.add(ModItems.BYZH_COAL, 2000);
 	}
 }
