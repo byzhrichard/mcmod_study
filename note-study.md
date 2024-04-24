@@ -33,7 +33,7 @@ public ActionResult useOnBlock(ItemUsageContext context) {
 
 5. BlockState 方块状态
 - isOf(Block对象)
-- 
+- isIn(TagKey对象)
 
 6. PlayerEntity 玩家实体
 - sendMessage(Text.literal("文本信息"))
