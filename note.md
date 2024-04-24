@@ -134,7 +134,21 @@ src/main/java/com/byzh/item/ModFoodComponents.java
 > public static final Item BYZH_FOOD = registerItems("byzh_food",new Item(new FabricItemSettings().food(ModFoodComponents.CORN)));
 
 # Fuel
-
+注册好Item后，将其写在初始化中即可
+```java
+@Override
+public void onInitialize() {
+    LOGGER.info("Hello Fabric world!");
+    //物品注册
+    ModItems.registerModItems();
+    //物品栏注册
+    ModItemGroup.registerModItemGroup();
+    //方块注册
+    ModBlocks.registerModBlocks();
+    //燃料注册
+    FuelRegistry.INSTANCE.add(ModItems.BYZH_COAL, 2000);
+	}
+```
 
 
 # 拓展：探矿器
