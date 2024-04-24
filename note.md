@@ -150,6 +150,17 @@ public void onInitialize() {
 	}
 ```
 
+# 工具信息
+在Item类中重写方法
+```java
+@Override 
+public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
+    super.appendTooltip(stack, world, tooltip, context);
+}
+```
+
+
+
 
 # 拓展：探矿器
 src/main/java/com/byzh/item/custom/Prospector.java
