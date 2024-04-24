@@ -159,7 +159,11 @@ public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> too
 }
 ```
 
-
+# Tag
+java中：
+src/main/java/com/byzh/util/ModTags.java
+data中：
+src/main/resources/data/try-mod/tags/blocks/prospector_list.json
 
 
 # 拓展：探矿器

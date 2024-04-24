@@ -1,5 +1,6 @@
 package com.byzh.item.custom;
 
+import com.byzh.util.ModTags;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -50,6 +51,7 @@ public class Prospector extends Item {
     }
 
     private boolean isRightBlock(BlockState state){
-        return state.isOf(Blocks.IRON_ORE) || state.isOf(Blocks.DIAMOND_ORE);
+//        return state.isOf(Blocks.IRON_ORE) || state.isOf(Blocks.DIAMOND_ORE);
+        return state.isIn(ModTags.Blocks.PROSPECTOR_LIST);
     }
 }
