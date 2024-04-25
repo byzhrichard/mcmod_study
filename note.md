@@ -173,6 +173,8 @@ src/main/java/com/byzh/util/ModTags.java
 data中：
 src/main/resources/data/try-mod/tags/blocks/prospector_list.json
 
+# DataGen
+src/main/java/com/byzh/TryModDataGenerator.java
 
 # 拓展：探矿器
 src/main/java/com/byzh/item/custom/Prospector.java
