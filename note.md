@@ -49,6 +49,7 @@ MC会**自动**根据物品注册时new Identifier内的name来找models下对�
 src/main/resources/assets/try-mod/models/item/ice_ether.json
 4. 材质文件
 src/main/resources/assets/try-mod/textures/item/ice_ether.png
+
 # ItemGroup
 写在一行
 ```java
@@ -89,6 +90,9 @@ private static ItemGroup registerItemGroups(String name, ItemGroup itemGroup){
 # Block
 Block注册分为 方块(Block) and 方块物品(BlockItem)
 
+方块掉落物文件：
+src/main/resources/data/try-mod/loot_tables/blocks/ice_ether_block.json
+
 方块状态文件：
 src/main/resources/assets/try-mod/blockstates/ice_ether_block.json
 告诉mc当渲染名为ice_ether_block的方块时，应该使用哪个模型文件 
@@ -111,6 +115,7 @@ src/main/resources/assets/try-mod/models/item/ice_ether_block.json
 
 > 对copyOf中的Blocks.STONE的STONE进行ctrl+b
 > ![img.png](pic/img.png)
+
 # 配方
 src/main/resources/data/try-mod/recipes/ice_ether_to_block.json
 如果要复写原版物品的配方，则加上 "replace": true,
