@@ -13,6 +13,9 @@ icon模组图片
 # 启动
 gradle-Tasks-fabric-runClient
 
+# 数据生成
+gradle-Tasks-fabric-runDatagen
+
 # lang
 > 若不写lang，大致以“类型.模组ID.物品名字”显示
 > 类型由mc内部决定
