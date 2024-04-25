@@ -16,7 +16,8 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
 
     @Override
     protected void configure(RegistryWrapper.WrapperLookup arg) {
-        getOrCreateTagBuilder(ModTags.Blocks.PROSPECTOR_LIST)
+        //接收TagKey
+        getOrCreateTagBuilder(ModTags.Blocks.PROSPECTOR_LIST)   //往自定义prospector_list里添加
                 .add(ModBlocks.ICE_ETHER_BLOCK)
                 .forceAddTag(BlockTags.COAL_ORES)
                 .forceAddTag(BlockTags.IRON_ORES)
@@ -26,9 +27,9 @@ public class ModBlockTagProvider extends FabricTagProvider.BlockTagProvider {
                 .forceAddTag(BlockTags.REDSTONE_ORES)
                 .forceAddTag(BlockTags.EMERALD_ORES)
                 .forceAddTag(BlockTags.COPPER_ORES);
-        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)
+        getOrCreateTagBuilder(BlockTags.PICKAXE_MINEABLE)   //用工具
                 .add(ModBlocks.ICE_ETHER_BLOCK);
-        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)
+        getOrCreateTagBuilder(BlockTags.NEEDS_IRON_TOOL)    //用铁镐
                 .add(ModBlocks.ICE_ETHER_BLOCK);
 
     }
