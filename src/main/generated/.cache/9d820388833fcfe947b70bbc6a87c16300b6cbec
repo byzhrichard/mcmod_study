@@ -1,0 +1,4 @@
+// 1.20.1	2024-04-25T11:18:06.6920799	try Mod/Tags for minecraft:block
+c03786a3ed4819069c916b9d580c3fcecbd759e4 data\minecraft\tags\blocks\mineable\pickaxe.json
+97ce7c776725c5e5b5e76527c0f4e10caaa731e3 data\try-mod\tags\blocks\prospector_list.json
+c03786a3ed4819069c916b9d580c3fcecbd759e4 data\minecraft\tags\blocks\needs_iron_tool.json
