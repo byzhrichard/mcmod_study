@@ -191,10 +191,10 @@ new FenceBlock(FabricBlockSettings.copyOf(Blocks.STONE))
 new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.STONE), WoodType.OAK)
 石砖：(需要注册到json)
 new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE))
-门：
-new DoorBlock(FabricBlockSettings.copyOf(Blocks.STONE), BlockSetType.STONE)
-活板门：
-new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.STONE), BlockSetType.STONE)
+门：(.nonOpaque()使得材质可透明)
+new DoorBlock(FabricBlockSettings.copyOf(Blocks.STONE).nonOpaque(), BlockSetType.STONE)
+活板门：(.nonOpaque()使得材质可透明)
+new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.STONE).nonOpaque(), BlockSetType.STONE)
 
 添加Tag时：
 ![img.png](pic/1232134.png)
@@ -206,7 +206,10 @@ addDrop(ModBlocks.ICE_ETHER_SLAB, slabDrops(ModBlocks.ICE_ETHER_SLAB));
 添加材质时：
 注意门有两个材质
 ![img.png](pic/4312321.png)
-
+用透明材质时：
+除了要.nonOpaque()
+还要在Client类中写以下内容
+![img.png](pic/1231334.png)
 
 # 拓展：探矿器
 src/main/java/com/byzh/item/custom/Prospector.java
