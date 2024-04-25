@@ -176,6 +176,38 @@ src/main/resources/data/try-mod/tags/blocks/prospector_list.json
 # DataGen
 src/main/java/com/byzh/TryModDataGenerator.java
 
+# 更多Block
+楼梯：
+new StairBlock(ModBlocks.ICE_ETHER_BLOCK.getDefaultState(), FabricBlockSettings.copyOf(Blocks.STONE))
+台阶：
+new SlabBlock(FabricBlockSettings.copyOf(Blocks.STONE))
+按钮：
+new ButtonBlock(FabricBlockSettings.copyOf(Blocks.STONE), BlockSetType.STONE, 20, true)
+压力板：
+new PressurePlateBlock(PressurePlateBlock.ActivationRUle.EVERYTHING, FabricBlockSettings.copyOf(Blocks.STONE), BlockSetType.STONE)
+栅栏：(需要注册到json)
+new FenceBlock(FabricBlockSettings.copyOf(Blocks.STONE))
+栅栏门：(需要注册到json)
+new FenceGateBlock(FabricBlockSettings.copyOf(Blocks.STONE), WoodType.OAK)
+石砖：(需要注册到json)
+new WallBlock(FabricBlockSettings.copyOf(Blocks.STONE))
+门：
+new DoorBlock(FabricBlockSettings.copyOf(Blocks.STONE), BlockSetType.STONE)
+活板门：
+new TrapdoorBlock(FabricBlockSettings.copyOf(Blocks.STONE), BlockSetType.STONE)
+
+添加Tag时：
+![img.png](pic/1232134.png)
+添加LootTable时：
+addDrop(ModBlocks.ICE_ETHER_DOOR, doorDrops(ModBlocks.ICE_ETHER_DOOR));
+addDrop(ModBlocks.ICE_ETHER_SLAB, slabDrops(ModBlocks.ICE_ETHER_SLAB));
+添加BlockState时：
+![img.png](pic/43243242.png)
+添加材质时：
+注意门有两个材质
+![img.png](pic/4312321.png)
+
+
 # 拓展：探矿器
 src/main/java/com/byzh/item/custom/Prospector.java
 因为Prospector已经继承了Item
