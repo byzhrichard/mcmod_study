@@ -16,6 +16,9 @@ gradle-Tasks-fabric-runClient
 # 数据生成
 gradle-Tasks-fabric-runDatagen
 
+# 创建
+![img.png](pic/1231241241.png)
+
 # lang
 > 若不写lang，大致以“类型.模组ID.物品名字”显示
 > 类型由mc内部决定
@@ -175,6 +178,16 @@ src/main/resources/data/try-mod/tags/blocks/prospector_list.json
 
 # DataGen
 src/main/java/com/byzh/TryModDataGenerator.java
+![img.png](pic/23242123.png)
+
+extends FabricModelProvider
+![img.png](pic/32423523.png)
+
+extends FabricBlockLootTableProvider
+![img.png](pic/42352352.png)
+
+extends FabricTagProvider.BlockTagProvider
+![img.png](pic/4123213.png)
 
 # 更多Block
 楼梯：
