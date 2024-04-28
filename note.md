@@ -166,7 +166,8 @@ public void onInitialize() {
 ```java
 @Override 
 public void appendTooltip(ItemStack stack, @Nullable World world, List<Text> tooltip, TooltipContext context) {
-    super.appendTooltip(stack, world, tooltip, context);
+        tooltip.add(Text.translatable("item.try-mod.byzh_fire.tooltip"));
+        super.appendTooltip(stack, world, tooltip, context);
 }
 ```
 
